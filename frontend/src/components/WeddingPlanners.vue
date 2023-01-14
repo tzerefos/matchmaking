@@ -7,6 +7,7 @@
 		<div class=" grid-container ">
 			<div class="business-box rounded-borders" v-for="item in filteredBusinesses" :key="item.id">
 				<img class="business-image" :src="require('../assets/images/' + item.image)">
+				<br>
 				<span> 
 					{{item.name}}
 				</span>
@@ -59,12 +60,12 @@ export default {
 	}
 	.grid-container{
 		display: grid;
-		grid-template-columns: auto auto auto auto auto;
-		padding: 1.25em;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		padding: 2em 2em 2em 2em;
 /*		margin: 0em 1.5em 1.5em 1.5em;*/
 		gap: 2.5em 2.5em;
 		overflow: scroll;
-		max-height: 820px;
+		max-height: 1100px;
 	}
 	.business-box{
 		display: grid-inline;
